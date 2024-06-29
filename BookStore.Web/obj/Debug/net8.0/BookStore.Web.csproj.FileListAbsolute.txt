@@ -291,3 +291,4 @@ C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Web\obj\Debug\net8.0\refi
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Web\obj\Debug\net8.0\BookStore.Web.pdb
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Web\obj\Debug\net8.0\BookStore.Web.genruntimeconfig.cache
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Web\obj\Debug\net8.0\ref\BookStore.Web.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Web\obj\Debug\net8.0\BookStore.Web.sourcelink.json
