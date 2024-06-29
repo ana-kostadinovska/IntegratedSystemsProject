@@ -1,0 +1,15 @@
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\bin\Debug\net8.0\BookStore.Repository.deps.json
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\bin\Debug\net8.0\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\bin\Debug\net8.0\BookStore.Repository.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\bin\Debug\net8.0\BookStore.Domain.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\bin\Debug\net8.0\BookStore.Domain.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.csproj.AssemblyReference.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.AssemblyInfoInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.AssemblyInfo.cs
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStor.9F9B03E6.Up2Date
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\refint\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\BookStore.Repository.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Repository\obj\Debug\net8.0\ref\BookStore.Repository.dll
