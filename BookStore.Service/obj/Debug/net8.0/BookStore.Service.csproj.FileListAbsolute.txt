@@ -15,3 +15,4 @@ C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Service\obj\Debug\net8.0\
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Service\obj\Debug\net8.0\ref\BookStore.Service.dll
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Service\bin\Debug\net8.0\BookStore.Repository.dll
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Service\bin\Debug\net8.0\BookStore.Repository.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore.Service\obj\Debug\net8.0\BookStore.Service.sourcelink.json

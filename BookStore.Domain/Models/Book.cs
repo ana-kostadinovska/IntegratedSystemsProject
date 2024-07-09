@@ -17,8 +17,8 @@ namespace BookStore.Domain.Models
         public int Edition { get; set; }
         public List<GenreEnum> Genres { get; set; }
         public Guid AuthorId { get; set; }
-        public Author Author { get; set; }
+        public Author? Author { get; set; }
         public Guid PublisherId { get; set; }
-        public Publisher Publisher { get; set; }
+        public Publisher? Publisher { get; set; }
     }
 }

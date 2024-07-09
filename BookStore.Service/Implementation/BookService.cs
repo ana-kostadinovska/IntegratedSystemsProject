@@ -13,11 +13,22 @@ namespace BookStore.Service.Implementation
     public class BookService : IBookService
     {
         private readonly IRepository<Book> _bookRepository;
+        private readonly IRepository<Author> _authorRepository;
+        private readonly IRepository<Publisher> _publisherRepository;
 
-        public BookService(IRepository<Book> bookRepository)
+        public BookService(IRepository<Book> bookRepository, IRepository<Author> authorRepository, IRepository<Publisher> publisherRepository)
         {
             _bookRepository = bookRepository;
+            _authorRepository = authorRepository;
+            _publisherRepository = publisherRepository;
         }
+
+
+
+        /*public BookService(IRepository<Book> bookRepository)
+        {
+            _bookRepository = bookRepository;
+        }*/
 
         public void CreateNewBook(Book book)
         {
@@ -42,7 +53,15 @@ namespace BookStore.Service.Implementation
 
         public Book GetDetailsForBook(Guid? id)
         {
+            /*Book book = _bookRepository.Get(id);
+            if(book != null)
+            {
+                book.Author = _authorRepository.Get(book.AuthorId);
+                book.Publisher = _publisherRepository.Get(book.PublisherId);
+            }*/
+
             return _bookRepository.Get(id);
+            //return book;
         }
     }
 }
