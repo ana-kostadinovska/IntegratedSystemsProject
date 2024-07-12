@@ -5,89 +5,102 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<style>
+    .book-details {
+        display: flex;
+        align-items: flex-start;
+    }
 
-<div>
-    <h4>Book</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.CoverImage)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CoverImage)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ReleaseYear)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ReleaseYear)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ISBN)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ISBN)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Edition)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Edition)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Genres)
-        </dt>
-        @* <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Genres)
-        </dd> *@
-        <dd class="col-sm-10">
-            @foreach (var genre in Model.Genres)
-            {
-                <span>@genre.ToString()</span>
+        .book-details .book-image {
+            flex: 0 0 30%; 
+            margin-right: 20px; 
+        }
 
-                <br />
+            .book-details .book-image img {
+                width: 80%;
+                height: 80%; 
+                object-fit: cover;
             }
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.AuthorId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.AuthorId)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.PublisherId)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.PublisherId)
-        </dd>
-        @* <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Author.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Author.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Publisher.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Publisher.Name)
-        </dd> *@
-    </dl>
+
+        .book-details .book-info {
+            flex: 1; 
+        }
+
+        .book-details dl {
+            margin-top: 0;
+        }
+
+            .book-details dl dt {
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .book-details dl dd {
+                margin-top: 10px;
+            }
+</style>
+
+<h1>Details for @Model.Title</h1>
+
+<div class="book-details mt-5">
+    <div class="book-image">
+        <img src="@Model.CoverImage" alt="@Model.Title">
+    </div>
+    <div class="book-info container">
+        <h4>@Model.Title</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ReleaseYear)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ReleaseYear)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ISBN)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ISBN)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Edition)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Edition)
+            </dd>
+            <dt class="col-sm-2">
+                Genres
+            </dt>
+            <dd class="col-sm-10">
+                @foreach (var genre in Model.Genres)
+                {
+                    <span>@genre.ToString()</span>
+                    <br />
+                }
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.AuthorId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.AuthorId)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.PublisherId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.PublisherId)
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
+
+<div class="mt-5">
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back</a>
 </div>
