@@ -34,7 +34,7 @@ builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 //builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
 // TODO: za admin
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
 
 var app = builder.Build();
