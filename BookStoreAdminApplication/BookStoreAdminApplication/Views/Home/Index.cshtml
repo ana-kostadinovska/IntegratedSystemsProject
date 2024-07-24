@@ -2,7 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="background: linear-gradient(rgba(0, 0, 0, 0.6),
+                       rgba(0, 0, 0, 0.6)), url('https://cdn1.bookmanager.com/i/1212915/store_floor_front_page_2.jpg') no-repeat center center;
+            background-size: cover; width: 1536px; margin-top: -73px; margin-left: -120px;">
+
+    <div class="container-fluid text-white text-center mt-5 align-items-center" style="height: 647px; widht: 1544px; padding-top: 175px;">
+        <h1 class="fw-bolder pb-5" style="padding-top: 50px;">Welcome to the Admin Application</h1>
+        <h4 class="pb-5 fw-bold">where you can import books, create invoice for an order and export all orders!</h4>
+        @* TODO: Link to action Get All Orders from OrderController*@
+        @* <a asp-controller="Order" asp-action="" class="btn btn-dark rounded-pill fw-bold px-5 py-2 text-uppercase text-decoration-none">Browse</a> *@
+    </div>
+
 </div>
