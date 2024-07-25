@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container">
+    <div class="form-container">
+        <div class="form-title fw-bold mb-5">Import Users</div>
+        <form asp-controller="User" asp-action="ImportUsers" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file fw-normal">Choose Excel File</label>
+                <input type="file" name="file" id="file" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success mt-2 mb-5">Import Excel</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn {
+        border-radius: 5px;
+    }
+</style>
