@@ -4,9 +4,42 @@
 @{
 }
 
-<form asp-controller="Book" asp-action="ImportBooks" method="post" enctype="multipart/form-data">
-    <div class="form-group">
-        <input type="file" name="file" class="form-control" />
+<div class="container">
+    <div class="form-container">
+        <div class="form-title fw-bold mb-5">Import Books</div>
+        <form asp-controller="Book" asp-action="ImportBooks" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file fw-normal">Choose Excel File</label>
+                <input type="file" name="file" id="file" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-success mt-2 mb-5">Import Excel</button>
+        </form>
     </div>
-    <button type="submit" class="btn btn-success">Import Excel</button>
-</form>
+</div>
+
+<style>
+    .container {
+        margin-top: 50px;
+    }
+
+    .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .form-control {
+        border-radius: 5px;
+    }
+
+    .btn {
+        border-radius: 5px;
+    }
+</style>
