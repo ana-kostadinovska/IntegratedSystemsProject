@@ -42,7 +42,7 @@ namespace BookStore.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Id,Name,Surname,Biography")] Author author)
+        public IActionResult Create([Bind("Id,Name,Surname,Biography,Image")] Author author)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +70,7 @@ namespace BookStore.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Guid id, [Bind("Id,Name,Surname,Biography")] Author author)
+        public IActionResult Edit(Guid id, [Bind("Id,Name,Surname,Biography,Image")] Author author)
         {
             if (id != author.Id)
             {
