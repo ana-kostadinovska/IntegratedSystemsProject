@@ -15,13 +15,14 @@ namespace BookStore.Web.Controllers.API
     {
         private readonly IBookService _bookService;
         private readonly UserManager<BookStoreUser> _userManager;
+        private readonly IOrderService _orderService;
 
-        public AdminController(IBookService bookService, UserManager<BookStoreUser> userManager)
+        public AdminController(IBookService bookService, UserManager<BookStoreUser> userManager, IOrderService orderService)
         {
             _bookService = bookService;
             _userManager = userManager;
+            _orderService = orderService;
         }
-
 
         /*[HttpPost("[action]")]
         public bool ImportAllBooks(List<BookDTO> model)
@@ -52,6 +53,17 @@ namespace BookStore.Web.Controllers.API
             return true;
         }*/
 
+        [HttpGet("[action]")]
+        public List<Order> GetAllOrders()
+        {
+            return this._orderService.GetAllOrders();
+        }
+
+        [HttpPost("[action]")]
+        public Order GetDetails(BaseEntity id)
+        {
+            return this._orderService.GetDetailsForOrder(id);
+        }
 
         [HttpPost("[action]")]
         public bool ImportAllBooks(List<BookDTO> model)
