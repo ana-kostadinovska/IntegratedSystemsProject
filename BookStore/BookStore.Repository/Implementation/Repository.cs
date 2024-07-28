@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -57,6 +58,26 @@ namespace BookStore.Repository.Implementation
             }
             entities.Remove(entity);
             context.SaveChanges();
+        }
+
+        public IEnumerable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = entities;
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+            return query.AsEnumerable();
+        }
+
+        public T GetIncluding(Guid? id, params Expression<Func<T, object>>[] includeProperties)
+        {
+            IQueryable<T> query = entities;
+            foreach (var includeProperty in includeProperties)
+            {
+                query = query.Include(includeProperty);
+            }
+            return query.SingleOrDefault(e => e.Id == id);
         }
     }
 }

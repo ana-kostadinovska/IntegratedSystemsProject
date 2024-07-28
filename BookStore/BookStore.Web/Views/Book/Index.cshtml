@@ -5,11 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="text-center my-4">Books</h1>
+@* <h1 class="text-center my-4">Books</h1> *@
 
-<div class="container">
-    <div class="mb-3 text-center">
+<div class="container mt-4">
+    @* <div class="mb-3 text-center">
         <a class="btn btn-primary" asp-controller="Book" asp-action="Create">Add New Book</a>
+    </div> *@
+    <div class="position-relative mb-5">
+        <h1 class="text-center">Books</h1>
+        <a class="btn btn-success position-absolute top-0 end-0" asp-controller="Book" asp-action="Create">Add New Book</a>
     </div>
 
     <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -26,7 +30,9 @@
                                 <span>@genre.ToString()</span>
                             }
                         </div>
+                        <p class="mt-2 fw-bold text-secondary" style="font-size: 14px;">@item.Author?.Name @item.Author?.Surname</p>
                         <div class="price mt-2">@item.Price.ToString("C")</div>
+                        @* <p class="mt-2 text-secondary" style="font-size: 14px;">Published by: @item.Publisher?.Name</p> *@
                     </div>
                     <div class="card-footer">
                         <a asp-controller="Book" asp-action="Details" asp-route-id="@item.Id" class="text-decoration-none me-2">
