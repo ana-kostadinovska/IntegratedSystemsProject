@@ -60,8 +60,10 @@ namespace BookStore.Service.Implementation
                 book.Publisher = _publisherRepository.Get(book.PublisherId);
             }*/
 
-            return _bookRepository.Get(id);
+            //return _bookRepository.Get(id);   OVA!!!
             //return book;
+
+            return _bookRepository.GetIncluding(id, b => b.Author, b => b.Publisher);
         }
     }
 }

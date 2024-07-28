@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,5 +15,7 @@ namespace BookStore.Repository.Interface
         void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
+        IEnumerable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties);
+        T GetIncluding(Guid? id, params Expression<Func<T, object>>[] includeProperties);
     }
 }

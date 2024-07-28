@@ -1,5 +1,6 @@
 ﻿using BookStore.Domain.Enums;
 using BookStore.Domain.Models;
+using BookStore.Repository.Interface;
 using BookStore.Service.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,17 +16,20 @@ namespace BookStore.Web.Controllers
         private readonly IAuthorService _authorService;
         private readonly IPublisherService _publisherService;
         private readonly IShoppingCartService _shoppingCartService;
+        private readonly IRepository<Book> _bookRepository;
 
-        public BookController(IBookService bookService, IAuthorService authorService, IPublisherService publisherService, IShoppingCartService shoppingCartService)
+        public BookController(IBookService bookService, IAuthorService authorService, IPublisherService publisherService, IShoppingCartService shoppingCartService, IRepository<Book> bookRepository)
         {
             _bookService = bookService;
             _authorService = authorService;
             _publisherService = publisherService;
             _shoppingCartService = shoppingCartService;
+            _bookRepository = bookRepository;
         }
 
         public IActionResult Index()
         {
+            var books = _bookRepository.GetAllIncluding(b => b.Author, b => b.Publisher).ToList();
             return View(_bookService.GetAllBooks());
         }
 
@@ -47,8 +51,12 @@ namespace BookStore.Web.Controllers
 
         public IActionResult Create()
         {
-            ViewBag.AuthorId = new SelectList(_authorService.GetAllAuthors(), "Id", "Name", "Surname");
-            ViewBag.PublisherId = new SelectList(_publisherService.GetAllPublishers(), "Id", "Name");
+            var authors = _authorService.GetAllAuthors()
+                                .Select(a => new { Id = a.Id, FullName = a.Name + " " + a.Surname })
+                                .ToList();
+
+            ViewBag.Authors = new SelectList(authors, "Id", "FullName");
+            ViewBag.Publishers = new SelectList(_publisherService.GetAllPublishers(), "Id", "Name");
 
             return View();
         }
@@ -82,8 +90,11 @@ namespace BookStore.Web.Controllers
 
             ViewBag.Genres = Enum.GetValues(typeof(GenreEnum)).Cast<GenreEnum>().ToList();
 
-            // Populate Authors and Publishers
-            ViewData["Authors"] = new SelectList(_authorService.GetAllAuthors(), "Id", "Name", book.AuthorId);
+            var authors = _authorService.GetAllAuthors()
+                               .Select(a => new { Id = a.Id, FullName = a.Name + " " + a.Surname })
+                               .ToList();
+
+            ViewBag.Authors = new SelectList(authors, "Id", "FullName", book.AuthorId);
             ViewData["Publishers"] = new SelectList(_publisherService.GetAllPublishers(), "Id", "Name", book.PublisherId);
 
             return View(book);
@@ -125,6 +136,13 @@ namespace BookStore.Web.Controllers
             {
                 return NotFound();
             }
+
+            var authors = _authorService.GetAllAuthors()
+                                .Select(a => new { Id = a.Id, FullName = a.Name + " " + a.Surname })
+                                .ToList();
+
+            ViewBag.Authors = new SelectList(authors, "Id", "FullName", book.AuthorId);
+            ViewData["Publishers"] = new SelectList(_publisherService.GetAllPublishers(), "Id", "Name", book.PublisherId);
 
             return View(book);
         }
