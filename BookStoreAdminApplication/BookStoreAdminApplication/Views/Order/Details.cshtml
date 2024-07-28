@@ -7,8 +7,13 @@
 @model BookStoreAdminApplication.Models.Order
 
 <div class="container">
-    <div>
-        <h4>Order for @Model.User.UserName</h4>
+    <div class="order-header">
+        <h4>
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0m-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+            </svg>
+            Order for <span class="text-success">@Model.User.UserName</span>
+        </h4>
     </div>
 
     @for(int i=0;i<Model.BooksInOrder.Count(); i++)
@@ -23,8 +28,14 @@
             <div class="card" style="width: 18rem; height: 35rem">
                 <img class="card-img-top" src="@item.CoverImage" alt="Card image cap">
                 <div class="card-body">
-                    <h5 class="card-title">@item.Title</h5>
-                    <h6>Price: @item.Price</h6>
+                    <h5 class="card-title fw-bold">@item.Title</h5>
+                    <div class="genres mt-2">
+                        @foreach (var genre in item.Genres)
+                        {
+                            <span class="badge bg-secondary">@genre.ToString()</span>
+                        }
+                    </div>
+                    <h6 class="price mt-2">@item.Price.ToString("C")</h6>
                 </div>
 
             </div>
@@ -36,3 +47,37 @@
         }
     }
 </div>
+
+<style>
+    .order-header {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-header h4 {
+        margin: 0;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .price {
+        font-size: 0.9rem; 
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    .genres span {
+        display: inline-block;
+        background: #6c757d;
+        color: #fff;
+        border-radius: 3px;
+        padding: 2px 5px;
+        margin-right: 5px;
+        font-size: 0.8rem;
+        font-weight: 100; 
+    }
+</style>

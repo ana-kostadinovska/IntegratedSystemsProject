@@ -5,71 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    .book-card {
-        position: relative;
-        width: 14rem;
-        margin: 15px; 
-        text-align: left; 
-        background: none; 
-        transition: transform 0.2s;
-    }
-
-        /* .book-card:hover {
-            transform: translateY(-10px);
-        } */
-
-        .book-card img {
-            width: 100%;
-            height: auto; 
-            object-fit: cover;
-            border-bottom: 1px solid #ddd; 
-        }
-
-        .book-card .card-body {
-            padding: 10px;
-        }
-
-        .book-card .card-title {
-            font-size: 1rem; 
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .book-card .genres {
-            margin-top: 5px;
-        }
-
-            .book-card .genres span {
-                display: inline-block;
-                background: #6c757d;
-                color: #fff;
-                border-radius: 3px;
-                padding: 2px 5px;
-                margin-right: 5px;
-                font-size: 0.8rem; 
-            }
-
-        .book-card .price {
-            font-size: 0.9rem; 
-            font-weight: bold;
-            color: #28a745;
-        }
-
-        .book-card .card-footer {
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-            background: none; 
-        }
-
-            .book-card .card-footer a {
-                text-decoration: none;
-                color: #007bff;
-                font-size: 0.9rem; 
-            }
-</style>
-
 <h1 class="text-center my-4">Books</h1>
 
 <div class="container">
@@ -122,3 +57,68 @@
         }
     </div>
 </div>
+
+<style>
+    .book-card {
+        position: relative;
+        width: 14rem;
+        margin: 15px;
+        text-align: left;
+        background: none;
+        transition: transform 0.2s;
+    }
+
+        /* .book-card:hover {
+                transform: translateY(-10px);
+            } */
+
+    .book-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .book-card .card-body {
+        padding: 10px;
+    }
+
+    .book-card .card-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .book-card .genres {
+        margin-top: 5px;
+    }
+
+    .book-card .genres span {
+        display: inline-block;
+        background: #6c757d;
+        color: #fff;
+        border-radius: 3px;
+        padding: 2px 5px;
+        margin-right: 5px;
+        font-size: 0.8rem;
+    }
+
+    .book-card .price {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #28a745;
+    }
+
+    .book-card .card-footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background: none;
+    }
+
+    .book-card .card-footer a {
+        text-decoration: none;
+        color: #007bff;
+        font-size: 0.9rem;
+    }
+</style>
