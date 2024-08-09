@@ -86,3 +86,9 @@ C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStore
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\Irony.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStoreAdminApplication\BookStoreAdminApplication\bin\Debug\net8.0\XLParser.dll
