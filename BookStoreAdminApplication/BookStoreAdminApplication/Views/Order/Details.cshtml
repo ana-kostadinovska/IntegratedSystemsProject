@@ -25,16 +25,17 @@
         }
         <div class="col-3 m-4">
 
-            <div class="card" style="width: 18rem; height: 35rem">
+            <div class="card" style="width: 14rem; height: 31rem">
                 <img class="card-img-top" src="@item.CoverImage" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title fw-bold">@item.Title</h5>
-                    <div class="genres mt-2">
+                    <div class="genres mt-2 mb-1">
                         @foreach (var genre in item.Genres)
                         {
                             <span class="badge bg-secondary">@genre.ToString()</span>
                         }
                     </div>
+                    <span class="fw-bold text-secondary">@item.Author?.Name</span> <span class="fw-bold text-secondary">@item.Author?.Surname</span>
                     <h6 class="price mt-2">@item.Price.ToString("C")</h6>
                 </div>
 
