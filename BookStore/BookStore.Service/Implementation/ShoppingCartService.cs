@@ -2,12 +2,14 @@
 using BookStore.Domain.Models;
 using BookStore.Repository.Interface;
 using BookStore.Service.Interface;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using BookStore.Domain;
 
 namespace BookStore.Service.Implementation
 {
@@ -18,14 +20,16 @@ namespace BookStore.Service.Implementation
         private readonly IRepository<BookInOrder> _bookInOrderRepository;
         private readonly IUserRepository _userRepository;
         private readonly IRepository<Order> _orderRepository;
+        private readonly IEmailService _emailService;
 
-        public ShoppingCartService(IRepository<ShoppingCart> shoppingCartRepository, IRepository<BookInShoppingCart> bookInCartRepository, IRepository<BookInOrder> bookInOrderRepository, IUserRepository userRepository, IRepository<Order> orderRepository)
+        public ShoppingCartService(IRepository<ShoppingCart> shoppingCartRepository, IRepository<BookInShoppingCart> bookInCartRepository, IRepository<BookInOrder> bookInOrderRepository, IUserRepository userRepository, IRepository<Order> orderRepository, IEmailService emailService)
         {
             _shoppingCartRepository = shoppingCartRepository;
             _bookInCartRepository = bookInCartRepository;
             _bookInOrderRepository = bookInOrderRepository;
             _userRepository = userRepository;
             _orderRepository = orderRepository;
+            _emailService = emailService;
         }
 
         public bool AddToShoppingConfirmed(BookInShoppingCart model, string userId)
@@ -104,10 +108,10 @@ namespace BookStore.Service.Implementation
                 }
 
                 var userShoppingCart = loggedInUser.ShoppingCart;
-                // TODO: Implement Stripe
-                //EmailMessage message = new EmailMessage();
-                //message.Subject = "Successfull order";
-                //message.MailTo = loggedInUser.Email;
+
+                EmailMessage message = new EmailMessage();
+                message.Subject = "Successfull order";
+                message.MailTo = loggedInUser.Email;
 
                 Order order = new Order
                 {
@@ -131,21 +135,21 @@ namespace BookStore.Service.Implementation
                     ).ToList();
 
 
-                //StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new StringBuilder();
 
                 var totalPrice = 0.0;
 
-                //sb.AppendLine("Your order is completed. The order conatins: ");
+                sb.AppendLine("Your order is completed. The order conatins: ");
 
                 for (int i = 0; i < booksInOrder.Count(); i++)
                 {
                     var currentItem = booksInOrder[i];
                     totalPrice += currentItem.Quantity * currentItem.Book.Price;
-                    //sb.AppendLine(i.ToString() + ". " + currentItem.Book.ProductName + " with quantity of: " + currentItem.Quantity + " and price of: $" + currentItem.Product.Price);
+                    sb.AppendLine(i.ToString() + ". " + currentItem.Book.Title + " with quantity of: " + currentItem.Quantity + " and price of: $" + currentItem.Book.Price);
                 }
 
-               /* sb.AppendLine("Total price for your order: " + totalPrice.ToString());
-                message.Content = sb.ToString();*/
+                sb.AppendLine("Total price for your order: " + totalPrice.ToString());
+                message.Content = sb.ToString();
 
 
                 foreach (var product in booksInOrder)
@@ -155,7 +159,7 @@ namespace BookStore.Service.Implementation
 
                 loggedInUser.ShoppingCart.BooksInShoppingCart.Clear();
                 _userRepository.Update(loggedInUser);
-                //this._emailService.SendEmailAsync(message);
+                this._emailService.SendEmailAsync(message);
 
                 return true;
             }

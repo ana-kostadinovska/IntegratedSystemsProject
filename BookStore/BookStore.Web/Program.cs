@@ -1,3 +1,5 @@
+using BookStore.Domain;
+using BookStore.Domain.Email;
 using BookStore.Domain.Identity;
 using BookStore.Repository;
 using BookStore.Repository.Implementation;
@@ -6,8 +8,14 @@ using BookStore.Service.Implementation;
 using BookStore.Service.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Core.Types;
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("StripeSettings"));
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -30,6 +38,8 @@ builder.Services.AddTransient<IBookService, BookService>();
 builder.Services.AddTransient<IAuthorService, AuthorService>();
 builder.Services.AddTransient<IPublisherService, PublisherService>();
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
+
 // stripe implementation
 //builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 

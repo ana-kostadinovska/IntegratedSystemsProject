@@ -1,4 +1,5 @@
-﻿using BookStore.Domain.Identity;
+﻿using BookStore.Domain;
+using BookStore.Domain.Identity;
 using BookStore.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -20,6 +21,8 @@ namespace BookStore.Repository
         public virtual DbSet<BookInShoppingCart> BookInShoppingCarts { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<BookInOrder> BookInOrders { get; set; }
+
+        public virtual DbSet<EmailMessage> EmailMessages { get; set; }
         // TODO: Implement Stripe
         /*public virtual DbSet<EmailMessage> EmailMessages { get; set; }*/
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
