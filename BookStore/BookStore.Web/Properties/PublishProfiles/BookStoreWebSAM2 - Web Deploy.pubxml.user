@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxbPe2+WPzUikqBA+YDwqRgAAAAACAAAAAAAQZgAAAAEAACAAAABY0Pgv4TMxaFkO3vuv7wgiY6EHV34LpcCklkRNy3AXcAAAAAAOgAAAAAIAACAAAADPiizukb086A/NYiqQBHaGi/6WgvT4kCHffOopXbz3DoAAAAAmHRpBzkdQ1ybXs6uLcHd/8Z98SD3Ir06s+6+wnZ7bWLH/lVtUo/oBtrvevFX5RAmayjLZc/iJns3zIeQzEcNZV8J3Fj3+/7QY7kvzHIrKM1tPRiNjep0yxCVJeBReN0RIQxGB6fSdZ8NJTnVegUzb4w8OzpZV4g22cTA0CtYulUAAAAC5rUuVQiPZlJxm/3Hnjp8ycshaMu5xpa5m2Cop0pkqaxFZ4tTwbAou2hB8OH41z11vGvy/kQHzg59ehTLDEVTQ</EncryptedPassword>
+    <History>True|2024-09-12T18:51:16.0137783Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ApplicationDbContextConnection">
+      <Value>Data Source=tcp:bookstoresamwebserver.database.windows.net,1433%3bInitial Catalog=BookStore.Web_db%3bUser Id=bookstore_sam%40bookstoresamwebserver%3bPassword=Admin0601!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="BookStore.Repository.ApplicationDbContext">
+      <Value>Data Source=tcp:bookstoresamwebserver.database.windows.net,1433%3bInitial Catalog=BookStore.Web_db%3bUser Id=bookstore_sam%40bookstoresamwebserver%3bPassword=Admin0601!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

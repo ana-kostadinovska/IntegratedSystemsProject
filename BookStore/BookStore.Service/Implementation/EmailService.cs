@@ -26,11 +26,11 @@ namespace BookStore.Service.Implementation
         {
             var emailMessage = new MimeMessage
             {
-                Sender = new MailboxAddress("BookSAM", "booksam_store@outlook.com"),
+                Sender = new MailboxAddress("BookSAM", "bookstore_sam@outlook.com"),
                 Subject = allMails.Subject
             };
 
-            emailMessage.From.Add(new MailboxAddress("EShop Application", "booksam_store@outlook.com"));
+            emailMessage.From.Add(new MailboxAddress("EShop Application", "bookstore_sam@outlook.com"));
 
             emailMessage.Body = new TextPart(MimeKit.Text.TextFormat.Plain) { Text = allMails.Content };
 

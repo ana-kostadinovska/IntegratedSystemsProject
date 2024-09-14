@@ -1,0 +1,13 @@
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\bin\Release\net8.0\BookStore.Domain.deps.json
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\bin\Release\net8.0\BookStore.Domain.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\bin\Release\net8.0\BookStore.Domain.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.csproj.AssemblyReference.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.AssemblyInfoInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.AssemblyInfo.cs
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.sourcelink.json
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\refint\BookStore.Domain.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\BookStore.Domain.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Domain\obj\Release\net8.0\ref\BookStore.Domain.dll

@@ -59,6 +59,19 @@
           }
         }
       },
+      "Dapper/2.1.35": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MailKit/4.7.1.1": {
         "type": "package",
         "dependencies": {
@@ -1640,7 +1653,8 @@
         "dependencies": {
           "BookStore.Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.3",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.3"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.3",
+          "Microsoft.Extensions.Configuration.UserSecrets": "8.0.0"
         },
         "compile": {
           "bin/placeholder/BookStore.Repository.dll": {}
@@ -1712,6 +1726,27 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "Dapper/2.1.35": {
+      "sha512": "YKRwjVfrG7GYOovlGyQoMvr1/IJdn+7QzNXJxyMh0YfFF5yvDmTYaJOVYWsckreNjGsGSEtrMTpnzxTUq/tZQw==",
+      "type": "package",
+      "path": "dapper/2.1.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.1.35.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/net7.0/Dapper.dll",
+        "lib/net7.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml",
+        "readme.md"
       ]
     },
     "MailKit/4.7.1.1": {
@@ -4377,25 +4412,26 @@
     "net8.0": [
       "BookStore.Domain >= 1.0.0",
       "BookStore.Repository >= 1.0.0",
+      "Dapper >= 2.1.35",
       "MailKit >= 4.7.1.1",
       "Microsoft.Extensions.Hosting >= 8.0.0",
       "MimeKit >= 4.7.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\matey\\.nuget\\packages\\": {}
+    "C:\\Users\\Laptop\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+      "projectUniqueName": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
       "projectName": "BookStore.Service",
-      "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
-      "packagesPath": "C:\\Users\\matey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\obj\\",
+      "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+      "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\matey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4409,11 +4445,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-              "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+            "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
             },
-            "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
-              "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
+            "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
+              "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
             }
           }
         }
@@ -4433,6 +4469,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Dapper": {
+            "target": "Package",
+            "version": "[2.1.35, )"
+          },
           "MailKit": {
             "target": "Package",
             "version": "[4.7.1.1, )"

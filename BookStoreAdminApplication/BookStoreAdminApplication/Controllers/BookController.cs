@@ -15,7 +15,8 @@ namespace BookStoreAdminApplication.Controllers
 
         public IActionResult ImportBooks(IFormFile file)
         {
-            string pathToUpload = $"{Directory.GetCurrentDirectory()}\\files\\{file.FileName}";
+            // string pathToUpload = $"{Directory.GetCurrentDirectory()}\\files\\{file.FileName}";
+            string pathToUpload = Path.Combine(Path.GetTempPath(), file.FileName);
 
             using (FileStream fileStream = System.IO.File.Create(pathToUpload))
             {
@@ -25,7 +26,7 @@ namespace BookStoreAdminApplication.Controllers
 
             List<Book> users = getAllBooksFromFile(file.FileName);
             HttpClient client = new HttpClient();
-            string URL = "http://localhost:5015/api/Admin/ImportAllBooks";
+            string URL = "https://bookstoreweb20240912205458.azurewebsites.net/api/Admin/ImportAllBooks";
 
             HttpContent content = new StringContent(JsonConvert.SerializeObject(users), Encoding.UTF8, "application/json");
 
@@ -40,7 +41,9 @@ namespace BookStoreAdminApplication.Controllers
         private List<Book> getAllBooksFromFile(string fileName)
         {
             List<Book> books = new List<Book>();
-            string filePath = $"{Directory.GetCurrentDirectory()}\\files\\{fileName}";
+            //string filePath = $"{Directory.GetCurrentDirectory()}\\files\\{fileName}";
+
+            string filePath = Path.Combine(Path.GetTempPath(), fileName);
 
             System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
 

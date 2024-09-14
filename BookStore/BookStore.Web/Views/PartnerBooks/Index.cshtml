@@ -1,0 +1,90 @@
+﻿@model IEnumerable<BookStore.Domain.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+                <div class="book-card">
+                    <img class="card-img-top" src="@item.CoverImage" alt="@item.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Title</h5>                                          
+                    </div>
+                    
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .book-card {
+        position: relative;
+        width: 14rem;
+        margin: 15px;
+        text-align: left;
+        background: none;
+        transition: transform 0.2s;
+    }
+
+        /* .book-card:hover {
+                    transform: translateY(-10px);
+                } */
+
+        .book-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .book-card .card-body {
+            padding: 10px;
+        }
+
+        .book-card .card-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .book-card .genres {
+            margin-top: 5px;
+        }
+
+            .book-card .genres span {
+                display: inline-block;
+                background: #6c757d;
+                color: #fff;
+                border-radius: 3px;
+                padding: 2px 5px;
+                margin-right: 5px;
+                font-size: 0.8rem;
+            }
+
+        .book-card .price {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .book-card .card-footer {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background: none;
+        }
+
+            .book-card .card-footer a {
+                text-decoration: none;
+                color: #007bff;
+                font-size: 0.9rem;
+            }
+</style>
+

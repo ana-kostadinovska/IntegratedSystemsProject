@@ -3,6 +3,7 @@ using ClosedXML.Excel;
 using GemBox.Document;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Reflection;
 using System.Text;
 
 namespace BookStoreAdminApplication.Controllers
@@ -16,7 +17,7 @@ namespace BookStoreAdminApplication.Controllers
         public IActionResult Index()
         {
             HttpClient client = new HttpClient();
-            string URL = "http://localhost:5015/api/Admin/GetAllOrders";
+            string URL = "https://bookstoreweb20240912205458.azurewebsites.net/api/Admin/GetAllOrders";
 
             HttpResponseMessage response = client.GetAsync(URL).Result;
             var data = response.Content.ReadAsAsync<List<Order>>().Result;
@@ -26,7 +27,7 @@ namespace BookStoreAdminApplication.Controllers
         public IActionResult Details(string id)
         {
             HttpClient client = new HttpClient();
-            string URL = "http://localhost:5015/api/Admin/GetDetails";
+            string URL = "https://bookstoreweb20240912205458.azurewebsites.net/api/Admin/GetDetails";
             var model = new
             {
                 Id = id
@@ -47,7 +48,7 @@ namespace BookStoreAdminApplication.Controllers
         {
             HttpClient client = new HttpClient();
 
-            string URL = "http://localhost:5015/api/Admin/GetDetails";
+            string URL = "https://bookstoreweb20240912205458.azurewebsites.net/api/Admin/GetDetails";
             var model = new
             {
                 Id = id
@@ -59,25 +60,31 @@ namespace BookStoreAdminApplication.Controllers
 
             var result = response.Content.ReadAsAsync<Order>().Result;
 
-            var templatePath = Path.Combine(Directory.GetCurrentDirectory(), "Invoice.docx");
-            var document = DocumentModel.Load(templatePath);
+            var assembly = Assembly.GetExecutingAssembly();
+            var resource = "BookStoreAdminApplication.Invoice.docx";
 
-            document.Content.Replace("{{OrderNumber}}", result.Id.ToString());
-            document.Content.Replace("{{UserName}}", result.User.UserName);
-
-            StringBuilder sb = new StringBuilder();
-            var total = 0.0;
-            foreach (var item in result.BooksInOrder)
+            using (var stream = assembly.GetManifestResourceStream(resource))
             {
-                sb.AppendLine("Book " + item.Book.Title + " has quantity " + item.Quantity + " with price " + item.Book.Price);
-                total += (item.Quantity * item.Book.Price);
-            }
-            document.Content.Replace("{{BookList}}", sb.ToString());
-            document.Content.Replace("{{TotalPrice}}", total.ToString() + "$");
+                var document = DocumentModel.Load(stream, GemBox.Document.LoadOptions.DocxDefault);
 
-            var stream = new MemoryStream();
-            document.Save(stream, new PdfSaveOptions());
-            return File(stream.ToArray(), new PdfSaveOptions().ContentType, "ExportInvoice.pdf");
+                document.Content.Replace("{{OrderNumber}}", result.Id.ToString());
+                document.Content.Replace("{{UserName}}", result.User.UserName);
+
+                StringBuilder sb = new StringBuilder();
+
+                var total = 0.0;
+                foreach (var item in result.BooksInOrder)
+                {
+                    sb.AppendLine("Book " + item.Book.Title + " has quantity " + item.Quantity + " with price " + item.Book.Price);
+                    total += (item.Quantity * item.Book.Price);
+                }
+                document.Content.Replace("{{BookList}}", sb.ToString());
+                document.Content.Replace("{{TotalPrice}}", total.ToString() + "$");
+
+                var strm = new MemoryStream();
+                document.Save(strm, new PdfSaveOptions());
+                return File(strm.ToArray(), new PdfSaveOptions().ContentType, "ExportInvoice.pdf");
+            }
 
         }
 
@@ -94,7 +101,7 @@ namespace BookStoreAdminApplication.Controllers
                 worksheet.Cell(1, 2).Value = "Customer UserName";
                 worksheet.Cell(1, 3).Value = "Total Price";
                 HttpClient client = new HttpClient();
-                string URL = "http://localhost:5015/api/Admin/GetAllOrders";
+                string URL = "https://bookstoreweb20240912205458.azurewebsites.net/api/Admin/GetAllOrders";
 
                 HttpResponseMessage response = client.GetAsync(URL).Result;
                 var data = response.Content.ReadAsAsync<List<Order>>().Result;
