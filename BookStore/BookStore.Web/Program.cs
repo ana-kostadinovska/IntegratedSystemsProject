@@ -21,6 +21,11 @@ builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Str
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+var partnerConnectionString = builder.Configuration.GetConnectionString("PartnerTeamConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(partnerConnectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<BookStoreUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -39,6 +44,7 @@ builder.Services.AddTransient<IAuthorService, AuthorService>();
 builder.Services.AddTransient<IPublisherService, PublisherService>();
 builder.Services.AddTransient<IShoppingCartService, ShoppingCartService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddTransient<IPartnerTeamService, PartnerTeamService>();
 
 // stripe implementation
 //builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));

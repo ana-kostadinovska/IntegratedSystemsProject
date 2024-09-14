@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2024-09-05T17:01:18.4372625Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2024-09-05T17:00:40.117539Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "ccc188ba-bf86-4b76-976e-378883fcf804"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "BookStoreWeb20240905184113ResourceGroup"
+    }
+  }
+}

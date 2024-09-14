@@ -3,6 +3,19 @@
     "mssql1": {
       "type": "mssql.local",
       "connectionId": "ConnectionStrings:DefaultConnection"
+    },
+    "compute.appService1": {
+      "group": "connections",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/BookSАМWeb",
+      "type": "compute.appService.windows"
+    },
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/eastus/connectors/ConnectionStringsApplicationDbContextCon_5620BCFE99",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/bookstoreweb-1dbserver/databases/BookStoreweb_db_1",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:ApplicationDbContextConnection",
+      "dynamicId": null
     }
   }
 }

@@ -1,0 +1,16 @@
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\bin\Release\net8.0\linux-x64\BookStore.Repository.deps.json
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\bin\Release\net8.0\linux-x64\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\bin\Release\net8.0\linux-x64\BookStore.Repository.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\bin\Release\net8.0\linux-x64\BookStore.Domain.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\bin\Release\net8.0\linux-x64\BookStore.Domain.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.csproj.AssemblyReference.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.AssemblyInfoInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.AssemblyInfo.cs
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.sourcelink.json
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStor.9F9B03E6.Up2Date
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\refint\BookStore.Repository.dll
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\BookStore.Repository.pdb
+C:\Users\Laptop\Desktop\IS-project\BookStore\BookStore\BookStore.Repository\obj\Release\net8.0\linux-x64\ref\BookStore.Repository.dll

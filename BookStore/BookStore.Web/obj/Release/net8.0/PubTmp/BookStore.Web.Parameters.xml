@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="BookStoreWeb20240912205458" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore\.Web\\obj\\Release\\net8\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="BookStore.Repository.ApplicationDbContext" description="" value="Data Source=tcp:bookstoreweb-1dbserver.database.windows.net,1433;Initial Catalog=BookStoreweb_db_1;User Id=bookstore_sam1@bookstoreweb-1dbserver;Password=Admin0601!" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore\.Web\\obj\\Release\\net8\.0\\PubTmp\\EFSQLScripts\\BookStore\.Repository\.ApplicationDbContext\.sql$" />
+  </parameter>
+</parameters>

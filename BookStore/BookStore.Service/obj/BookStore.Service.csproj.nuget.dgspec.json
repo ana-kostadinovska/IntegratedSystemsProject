@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {}
+    "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+    "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
         "projectName": "BookStore.Domain",
-        "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
-        "packagesPath": "C:\\Users\\matey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,17 +70,17 @@
         }
       }
     },
-    "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
+    "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj",
         "projectName": "BookStore.Repository",
-        "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj",
-        "packagesPath": "C:\\Users\\matey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj",
+        "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,8 +94,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+              "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
               }
             }
           }
@@ -122,6 +122,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -144,17 +148,17 @@
         }
       }
     },
-    "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
+    "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
         "projectName": "BookStore.Service",
-        "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
-        "packagesPath": "C:\\Users\\matey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Service\\obj\\",
+        "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\BookStore.Service.csproj",
+        "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\matey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,11 +172,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
-                "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
+              "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj": {
+                "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Domain\\BookStore.Domain.csproj"
               },
-              "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
-                "projectPath": "C:\\Users\\matey\\Desktop\\IntegratedSystemsProject\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
+              "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj": {
+                "projectPath": "C:\\Users\\Laptop\\Desktop\\IS-project\\BookStore\\BookStore\\BookStore.Repository\\BookStore.Repository.csproj"
               }
             }
           }
@@ -192,6 +196,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.7.1.1, )"

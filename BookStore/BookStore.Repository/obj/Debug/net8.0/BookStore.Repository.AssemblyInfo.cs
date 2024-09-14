@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("499b41f0-8be6-4ec5-b3e7-10f5a53583a6")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookStore.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4497a5c69c6bdb1efe46814a6fea42ad7687e7db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f9cde6b37dc3d36373310ecc8897dcecad4d970")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookStore.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookStore.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
