@@ -33,15 +33,20 @@ namespace BookStore.Service.Implementation
                     var kniga = new Book
                     {
                         Id = book.Id,
-                        Title = book.Title,
+                        Title = "Partner's Book: " + book.Title,
                         CoverImage = book.ImageUrl,
-                        ISBN = book.ISBN
+                        ISBN = formatISBN(book.ISBN)
                     };
                     localBooks.Add(kniga);
                 }
 
                 return localBooks;
             }
+        }
+
+        private string formatISBN(string isbn)
+        {
+            return isbn.Replace("-", "");
         }
     }
 }
