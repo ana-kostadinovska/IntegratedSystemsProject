@@ -7,6 +7,8 @@
 
 <div class="container mt-4">
 
+    <h1 class="text-center">Our Partner's Books</h1>
+
     <div class="row row-cols-1 row-cols-md-4 g-4">
         @foreach (var item in Model)
         {
@@ -14,7 +16,8 @@
                 <div class="book-card">
                     <img class="card-img-top" src="@item.CoverImage" alt="@item.Title">
                     <div class="card-body">
-                        <h5 class="card-title">@item.Title</h5>                                          
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="mt-2 fw-bold text-secondary" style="font-size: 14px;">ISBN: @item.ISBN</p>
                     </div>
                     
                 </div>
